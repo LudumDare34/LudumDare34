@@ -12,12 +12,16 @@ public class TargetMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		Vector3 movement = new Vector3 (1,1,0.0f);
+		Vector3 movement = new Vector3 (-1,-1,0.0f);
 		rb.velocity = movement.normalized * speed;
+
 	}
 
 	void OnBecameInvisible(){
 		Debug.Log ("I became invisible");
 		Destroy(gameObject);
 	}
+
+
+
 }
