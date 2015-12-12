@@ -18,10 +18,12 @@ public class TargetMovement : MonoBehaviour {
 	}
 
 	void OnBecameInvisible(){
-		Debug.Log ("I became invisible");
 		Destroy(gameObject);
 	}
 
-
+	void OnTriggerEnter2D(Collider2D other){
+		Debug.Log ("I have My Icecream");
+		Destroy (other.gameObject);
+	}
 
 }

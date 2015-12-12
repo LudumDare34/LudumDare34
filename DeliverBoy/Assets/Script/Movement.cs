@@ -5,12 +5,14 @@ public class Movement : MonoBehaviour {
 
 	public float speed;
 	public GameObject prefab;
+	public GameObject delivery;
 	public float coolDownSeconds;
 
 
 	private Rigidbody2D rb;
 	private Vector3 looking;
 	private float coolDownWaited;
+	private float coolDownWaitedLateral;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +30,10 @@ public class Movement : MonoBehaviour {
 
 			if(Input.GetKey(KeyCode.X)){
 				forwardShoot();
+			}
+
+			if(Input.GetKey(KeyCode.Z)){
+				lateralShoot();
 			}
 
 			//Translation
@@ -59,5 +65,16 @@ public class Movement : MonoBehaviour {
 		}
 		coolDownWaited += Time.fixedDeltaTime;
 
+	}
+
+	void lateralShoot(){
+		if (coolDownWaitedLateral >= coolDownSeconds) {
+			GameObject arrow = (GameObject)Instantiate (delivery, transform.position + new Vector3(-1,1), transform.rotation);
+			Rigidbody2D rbArrow = arrow.GetComponent<Rigidbody2D> ();
+			rbArrow.velocity = new Vector3(-1,1) * 10f;
+			coolDownWaitedLateral= 0;
+			return;
+		}
+		coolDownWaitedLateral += Time.fixedDeltaTime;
 	}
 }
