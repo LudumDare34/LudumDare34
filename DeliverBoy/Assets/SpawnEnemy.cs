@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TargetSpawnPoint : MonoBehaviour {
-	
-
+public class SpawnEnemy : MonoBehaviour {
 	public GameObject prefab;
 	public float secondsToSpawn;
 	private float secondsPassed;
-
+	
 	// Use this for initialization
 	void Start () {
-		Camera  mainCamera = FindObjectOfType<Camera> ();
 	}
 	
 	void Update(){
@@ -22,10 +19,10 @@ public class TargetSpawnPoint : MonoBehaviour {
 			secondsPassed += 0.1f;
 		}
 	}
-
+	
 	void Creating(){
-		Instantiate (prefab, transform.position, Quaternion.identity);
+		Instantiate (prefab, transform.position + new Vector3(Random.value*3,0,0), Quaternion.identity);
 	}
-
+	
 
 }
