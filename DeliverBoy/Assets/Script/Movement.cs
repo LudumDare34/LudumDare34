@@ -5,16 +5,19 @@ public class Movement : MonoBehaviour {
 
 	public float speed;
 	public GameObject prefab;
+	public float coolDownSeconds;
+
 
 	private Rigidbody2D rb;
 	private Vector3 looking;
-
+	private float coolDownWaited;
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 		speed = 2f;
 		looking = new Vector3 (1, 1, 0);
+		coolDownSeconds = 1.5f;
 	}
 	
 	// Update is called once per frame
@@ -47,8 +50,14 @@ public class Movement : MonoBehaviour {
 	}
 
 	void forwardShoot(){
-		GameObject arrow = (GameObject)Instantiate(prefab, transform.position  + looking, transform.rotation);
-		Rigidbody2D rbArrow = arrow.GetComponent<Rigidbody2D>();
-		rbArrow.velocity = looking *10f;
+		if (coolDownWaited >= coolDownSeconds) {
+			GameObject arrow = (GameObject)Instantiate (prefab, transform.position + looking, transform.rotation);
+			Rigidbody2D rbArrow = arrow.GetComponent<Rigidbody2D> ();
+			rbArrow.velocity = looking * 10f;
+			coolDownWaited = 0;
+			return;
+		}
+		coolDownWaited += Time.fixedDeltaTime;
+
 	}
 }

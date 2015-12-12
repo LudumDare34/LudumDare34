@@ -20,8 +20,18 @@ public class DynamicEnemyIA : MonoBehaviour {
 		rb.velocity = looking * speed;
 	}
 
-	void OnTriggerEnter(Collider other){
+	void OnTriggerEnter2D(Collider2D other){
 		Destroy (gameObject);
 	}
+
+	void OnBecameInvisible(){
+		Debug.Log ("I became invisible");
+		Destroy(gameObject);
+	}
+
+
+	/*void OnCollisionEnter2D(Collision2D coll) {
+		Debug.Log("CollisionEnter");		
+	}*/
 
 }
