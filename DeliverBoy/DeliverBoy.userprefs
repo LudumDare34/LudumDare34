@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/DynamicEnemyIA.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/SpawnScenario.cs">
     <Files>
-      <File FileName="Assets/Script/Movement.cs" Line="62" Column="76" />
+      <File FileName="Assets/Script/ScenarioMovement.cs" Line="22" Column="3" />
       <File FileName="Assets/Script/DynamicEnemyIA.cs" Line="44" Column="3" />
-      <File FileName="Assets/Script/SpawnEnemy.cs" Line="20" Column="4" />
-      <File FileName="Assets/Script/SpawnScenario.cs" Line="38" Column="22" />
+      <File FileName="Assets/Script/SpawnScenario.cs" Line="27" Column="7" />
+      <File FileName="Assets/Script/SpawnEnemy.cs" Line="24" Column="99" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
