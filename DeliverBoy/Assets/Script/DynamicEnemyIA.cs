@@ -13,7 +13,7 @@ public class DynamicEnemyIA : MonoBehaviour {
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 		looking = new Vector3 (-1, -1, 0);
-		speed = Random.value * Time.time/division;
+		speed = Random.value * Time.time/division +1 ;
 		//speed = 1;
 
 	}

@@ -89,8 +89,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 496356}
   - 95: {fileID: 9554184}
-  - 114: {fileID: 11429186}
   - 114: {fileID: 11420640}
+  - 114: {fileID: 11429186}
+  - 114: {fileID: 11412910}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -393,6 +394,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11412910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e00928efd42149fab92e3f53c9d94a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11420640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -409,6 +421,7 @@ MonoBehaviour:
   coolDownSeconds: .800000012
   clip: {fileID: 0}
   source: {fileID: 0}
+  text: {fileID: 0}
 --- !u!114 &11429186
 MonoBehaviour:
   m_ObjectHideFlags: 1

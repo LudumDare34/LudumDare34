@@ -45,14 +45,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\IceCreamBehaviour.cs" />
+     <Compile Include="Assets\AnimationController.cs" />
      <Compile Include="Assets\Script\BulletBehaviour.cs" />
      <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\DynamicEnemyIA.cs" />
+     <Compile Include="Assets\Script\IceCreamBehaviour.cs" />
      <Compile Include="Assets\Script\Movement.cs" />
+     <Compile Include="Assets\Script\ScenarioMovement.cs" />
      <Compile Include="Assets\Script\ShootContoller.cs" />
      <Compile Include="Assets\Script\SpawnEnemy.cs" />
      <Compile Include="Assets\Script\SpawnIceCReamBoxes.cs" />
+     <Compile Include="Assets\Script\SpawnScenario.cs" />
      <Compile Include="Assets\Script\TargetMovement.cs" />
      <Compile Include="Assets\Script\TargetSpawnPoint.cs" />
  <Reference Include="UnityEngine.UI">
