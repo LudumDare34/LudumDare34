@@ -4,10 +4,13 @@ using System.Collections;
 public class TargetMovement : MonoBehaviour {
 
 	public float speed;
+	public Sprite happySprite;
 	private Rigidbody2D rb;
+	private SpriteRenderer spriteRenderer;
 
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
+		spriteRenderer = gameObject.GetComponent<SpriteRenderer> ();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +27,7 @@ public class TargetMovement : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("I have My Icecream");
 		Destroy (other.gameObject);
+		spriteRenderer.sprite = happySprite;
 	}
 
 }

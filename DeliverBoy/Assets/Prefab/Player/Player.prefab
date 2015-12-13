@@ -90,6 +90,7 @@ GameObject:
   - 4: {fileID: 496356}
   - 95: {fileID: 9554184}
   - 114: {fileID: 11429186}
+  - 114: {fileID: 11420640}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -392,6 +393,22 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11420640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff69e3f9957a4efba81ce0a8c1f59a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 178222, guid: aaed2abd84fdd4763880d6ecb16d0b63, type: 2}
+  delivery: {fileID: 199374, guid: 91793a9ea9c7945339df2ab92c66e07e, type: 2}
+  coolDownSeconds: .800000012
+  clip: {fileID: 0}
+  source: {fileID: 0}
 --- !u!114 &11429186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -404,9 +421,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  prefab: {fileID: 178222, guid: aaed2abd84fdd4763880d6ecb16d0b63, type: 2}
-  delivery: {fileID: 199374, guid: 91793a9ea9c7945339df2ab92c66e07e, type: 2}
-  coolDownSeconds: 1.5
 --- !u!212 &21207662
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -688,7 +702,7 @@ Prefab:
       objectReference: {fileID: 199374, guid: 91793a9ea9c7945339df2ab92c66e07e, type: 2}
     - target: {fileID: 0}
       propertyPath: coolDownSeconds
-      value: 1.5
+      value: .800000012
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
