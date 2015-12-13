@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DynamicEnemyIA : MonoBehaviour {
 
+	public float division = 40;
+
 	private Vector3 looking;
 	private Rigidbody2D rb;
 	private float speed;
@@ -11,8 +13,8 @@ public class DynamicEnemyIA : MonoBehaviour {
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 		looking = new Vector3 (-1, -1, 0);
-		//speed = Random.value * Time.time / 120f;
-		speed = 1;
+		speed = Random.value * Time.time/division;
+		//speed = 1;
 
 	}
 	

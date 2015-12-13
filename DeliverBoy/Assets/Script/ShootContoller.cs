@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ShootContoller : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class ShootContoller : MonoBehaviour {
 	public float coolDownSeconds;
 	public AudioClip clip;
 	public AudioSource source;
+	public Text text;
 
 	private float coolDownWaited;
 	private float coolDownWaitedLateral;
@@ -19,6 +21,8 @@ public class ShootContoller : MonoBehaviour {
 		coolDownSeconds = 1.5f;
 		looking = new Vector3 (1, 1, 0);
 		source = GetComponent<AudioSource> ();
+		munition = 10;
+		SetCountText ();
 	}
 	
 	// Update is called once per frame
@@ -36,15 +40,6 @@ public class ShootContoller : MonoBehaviour {
 		}
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.tag == "IceCreamBox") {
-			munition += 2;
-			if(munition > 10){
-				munition = 10;
-			}
-		}
-	}
-
 	void forwardShoot(){
 		if (coolDownWaited >= coolDownSeconds) {
 			GameObject arrow = (GameObject)Instantiate (prefab, transform.position + looking, transform.rotation);
@@ -57,13 +52,26 @@ public class ShootContoller : MonoBehaviour {
 	}
 	
 	void lateralShoot(){
-		if (coolDownWaitedLateral >= coolDownSeconds) {
+		if (coolDownWaitedLateral >= coolDownSeconds && munition > 0) {
 			GameObject arrow = (GameObject)Instantiate (delivery, transform.position + new Vector3(-1,1), transform.rotation);
 			Rigidbody2D rbArrow = arrow.GetComponent<Rigidbody2D> ();
 			rbArrow.velocity = new Vector3(-1,1) * 10f;
 			coolDownWaitedLateral= 0;
+			munition -=1;
+			SetCountText();
 			return;
 		}
+	}
+
+	public void addMunition(){
+		munition = 10;
+		SetCountText ();
+	}
+
+	void SetCountText ()
+	{
+		text.text = "Count: " + munition.ToString ();
+
 	}
 
 }

@@ -40,19 +40,26 @@ public class Movement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
+
+
+
 		if (other.gameObject.tag == "PlayerBound") {
 			rb.velocity = Vector3.zero;
-		} else {
+		}
+		else {
 			Destroy(other.gameObject);
 		}
-
+		
 	}
 
 	void OnCollisionEnter2D(Collision2D other){
+		if (other.gameObject.tag == "IceCreamBox") {
+			gameObject.GetComponent<ShootContoller>().addMunition();
+			return;
+		}
 		if (other.gameObject.tag == "Enemy") {
-
-			///////////////////////Aquí game over!!!!!!
 			Destroy (gameObject);
+			GameObject.Find("Manager").GetComponent<ChangeScene>().ChangeToScene(2);
 		}
 	
 	}

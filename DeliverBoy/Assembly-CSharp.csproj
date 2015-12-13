@@ -45,13 +45,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\IceCreamBehaviour.cs" />
      <Compile Include="Assets\Script\BulletBehaviour.cs" />
+     <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\DynamicEnemyIA.cs" />
      <Compile Include="Assets\Script\Movement.cs" />
+     <Compile Include="Assets\Script\ShootContoller.cs" />
      <Compile Include="Assets\Script\SpawnEnemy.cs" />
+     <Compile Include="Assets\Script\SpawnIceCReamBoxes.cs" />
      <Compile Include="Assets\Script\TargetMovement.cs" />
      <Compile Include="Assets\Script\TargetSpawnPoint.cs" />
-     <Compile Include="Assets\ShootContoller.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

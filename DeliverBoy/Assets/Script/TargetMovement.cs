@@ -7,10 +7,12 @@ public class TargetMovement : MonoBehaviour {
 	public Sprite happySprite;
 	private Rigidbody2D rb;
 	private SpriteRenderer spriteRenderer;
+	private AudioSource source;
 
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer> ();
+		source = gameObject.GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,7 @@ public class TargetMovement : MonoBehaviour {
 		Debug.Log ("I have My Icecream");
 		Destroy (other.gameObject);
 		spriteRenderer.sprite = happySprite;
+		source.Play ();
 	}
 
 }
