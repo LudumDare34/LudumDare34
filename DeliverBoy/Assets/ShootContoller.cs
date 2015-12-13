@@ -6,6 +6,9 @@ public class ShootContoller : MonoBehaviour {
 	public GameObject prefab;
 	public GameObject delivery;
 	public float coolDownSeconds;
+	public AudioClip clip;
+	public AudioSource source;
+
 	private float coolDownWaited;
 	private float coolDownWaitedLateral;
 	private int munition;
@@ -15,7 +18,7 @@ public class ShootContoller : MonoBehaviour {
 	void Start () {
 		coolDownSeconds = 1.5f;
 		looking = new Vector3 (1, 1, 0);
-
+		source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -48,7 +51,8 @@ public class ShootContoller : MonoBehaviour {
 			Rigidbody2D rbArrow = arrow.GetComponent<Rigidbody2D> ();
 			rbArrow.velocity = looking * 10f;
 			coolDownWaited = 0;
-			return;
+
+			source.Play();
 		}
 	}
 	

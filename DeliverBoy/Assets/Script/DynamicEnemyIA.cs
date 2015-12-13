@@ -25,6 +25,7 @@ public class DynamicEnemyIA : MonoBehaviour {
 		if (other.gameObject.tag == "IceCream") {
 			Destroy (other.gameObject);
 		} else {
+			Destroy(other.gameObject);
 			Destroy (gameObject);
 		}
 	}
