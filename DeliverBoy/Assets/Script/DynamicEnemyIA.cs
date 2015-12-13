@@ -13,6 +13,7 @@ public class DynamicEnemyIA : MonoBehaviour {
 		looking = new Vector3 (-1, -1, 0);
 		//speed = Random.value * Time.time / 120f;
 		speed = 1;
+
 	}
 	
 	// Update is called once per frame
@@ -21,7 +22,17 @@ public class DynamicEnemyIA : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		Destroy (gameObject);
+		if (other.gameObject.tag == "IceCream") {
+			Destroy (other.gameObject);
+		} else {
+			Destroy (gameObject);
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D col){
+		if (col.collider.gameObject.tag == "PlayerBound") {
+			Destroy (gameObject);
+		}
 	}
 
 	void OnBecameInvisible(){
