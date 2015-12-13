@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21214944}
   - 114: {fileID: 11498496}
   - 50: {fileID: 5026472}
+  - 58: {fileID: 5899144}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -46,6 +47,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5899144
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195898}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: .0799999982
 --- !u!114 &11498496
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -57,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7f2db57b6754df6a3e1f2df66b54b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1.70000005
 --- !u!212 &21214944
 SpriteRenderer:
   m_ObjectHideFlags: 1
