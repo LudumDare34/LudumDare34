@@ -21,7 +21,7 @@ public class SpawnEnemy : MonoBehaviour {
 	}
 	
 	void Creating(){
-		Instantiate (prefab, transform.position + new Vector3(Random.value*3,0,0), Quaternion.identity);
+		Instantiate (prefab, transform.position + new Vector3(Random.value*6,0,0), Quaternion.identity);
 	}
 	
 

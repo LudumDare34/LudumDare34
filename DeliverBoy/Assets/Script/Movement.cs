@@ -47,9 +47,11 @@ public class Movement : MonoBehaviour {
 			rb.velocity = Vector3.zero;
 			Debug.Log(rb.velocity);
 		}
+		coolDownWaited += Time.fixedDeltaTime;
+		coolDownWaitedLateral += Time.fixedDeltaTime;
 	}
 
-	void OnTriggerEnter(Collider other){
+	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag == "PlayerBound") {
 			rb.velocity = Vector3.zero;
 		}
@@ -63,7 +65,7 @@ public class Movement : MonoBehaviour {
 			coolDownWaited = 0;
 			return;
 		}
-		coolDownWaited += Time.fixedDeltaTime;
+
 
 	}
 
@@ -75,6 +77,6 @@ public class Movement : MonoBehaviour {
 			coolDownWaitedLateral= 0;
 			return;
 		}
-		coolDownWaitedLateral += Time.fixedDeltaTime;
+
 	}
 }
