@@ -45,16 +45,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-     <Compile Include="Assets\Script\ChangeScene.cs" />
-=======
      <Compile Include="Assets\Script\BulletBehaviour.cs" />
+     <Compile Include="Assets\Script\ChangeScene.cs" />
      <Compile Include="Assets\Script\DynamicEnemyIA.cs" />
->>>>>>> d4554ae350c07d5028378e083c11c2afa50bfc53
      <Compile Include="Assets\Script\Movement.cs" />
+     <Compile Include="Assets\Script\SpawnEnemy.cs" />
      <Compile Include="Assets\Script\TargetMovement.cs" />
      <Compile Include="Assets\Script\TargetSpawnPoint.cs" />
-     <Compile Include="Assets\SpawnEnemy.cs" />
+     <None Include="Assets\Editor\WakaTime\client\tests\samples\projects\svn\emptyfile.txt" />
+     <None Include="Assets\Editor\WakaTime\client\tests\samples\codefiles\twolinefile.txt" />
+     <None Include="Assets\Editor\WakaTime\client\tests\samples\projects\wakatime_project_file\emptyfile.txt" />
+     <None Include="Assets\Editor\WakaTime\client\tests\samples\projects\git\emptyfile.txt" />
+     <None Include="Assets\Editor\WakaTime\client\tests\samples\projects\project_map\emptyfile.txt" />
+     <None Include="Assets\Editor\WakaTime\client\dev-requirements.txt" />
+     <None Include="Assets\Editor\WakaTime\client\tests\samples\projects\hg\emptyfile.txt" />
+     <None Include="Assets\Editor\WakaTime\client\tests\samples\codefiles\emptyfile.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
