@@ -18,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Life
+  - Scenario
   - 
   - 
   - 
@@ -45,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Scenario
+    uniqueID: 94649345
+    locked: 0
+  - name: Casa
+    uniqueID: 1834607451
+    locked: 0
+  - name: Life
+    uniqueID: 2174370451
     locked: 0

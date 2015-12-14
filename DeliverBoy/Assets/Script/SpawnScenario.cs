@@ -34,7 +34,7 @@ public class SpawnScenario : MonoBehaviour {
 	}
 
 	void Creating(){
-		Instantiate (prefab, transform.position , prefab.transform.rotation);
+		Instantiate (prefab, transform.position , Quaternion.identity);
 	}
 	
 }

@@ -13,6 +13,7 @@ public class TargetMovement : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer> ();
 		source = gameObject.GetComponent<AudioSource> ();
+		speed = Random.value * Time.time/40 +1 ;
 	}
 	
 	// Update is called once per frame
