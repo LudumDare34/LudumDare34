@@ -115,7 +115,10 @@ PlayerSettings:
   iPhoneTargetOSVersion: 22
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
+<<<<<<< HEAD
   uIRequiresFullScreen: 1
+=======
+>>>>>>> 8e730ea8887f24f4974184472bceb3ccca401c9f
   uIStatusBarHidden: 1
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
@@ -161,6 +164,7 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
+<<<<<<< HEAD
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
@@ -168,6 +172,9 @@ PlayerSettings:
       m_Icon: {fileID: 0}
       m_Width: 128
       m_Height: 128
+=======
+  m_BuildTargetIcons: []
+>>>>>>> 8e730ea8887f24f4974184472bceb3ccca401c9f
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsAPIs: []
   webPlayerTemplate: APPLICATION:Default
@@ -263,8 +270,11 @@ PlayerSettings:
   ps4ReprojectionSupport: 0
   ps4UseAudio3dBackend: 0
   ps4Audio3dVirtualSpeakerCount: 14
+<<<<<<< HEAD
   ps4attribCpuUsage: 0
   ps4SocialScreenEnabled: 0
+=======
+>>>>>>> 8e730ea8887f24f4974184472bceb3ccca401c9f
   ps4attribUserManagement: 0
   ps4attribMoveSupport: 0
   ps4attrib3DSupport: 0

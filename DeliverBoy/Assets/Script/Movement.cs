@@ -9,17 +9,27 @@ public class Movement : MonoBehaviour {
 	public float coolDownSeconds;
 
 
+
 	private Rigidbody2D rb;
 	private Vector3 looking;
+<<<<<<< HEAD
 	private float coolDownWaited;
 	private float coolDownWaitedLateral;
+=======
+
+
+>>>>>>> 8e730ea8887f24f4974184472bceb3ccca401c9f
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D> ();
 		speed = 2f;
 		looking = new Vector3 (1, 1, 0);
+<<<<<<< HEAD
 		coolDownSeconds = 1.5f;
+=======
+
+>>>>>>> 8e730ea8887f24f4974184472bceb3ccca401c9f
 	}
 	
 	// Update is called once per frame
@@ -28,6 +38,7 @@ public class Movement : MonoBehaviour {
 
 		if (Input.anyKey) {
 
+<<<<<<< HEAD
 			if(Input.GetKey(KeyCode.X)){
 				forwardShoot();
 			}
@@ -36,6 +47,8 @@ public class Movement : MonoBehaviour {
 				lateralShoot();
 			}
 
+=======
+>>>>>>> 8e730ea8887f24f4974184472bceb3ccca401c9f
 			//Translation
 			float h = Input.GetAxis ("Horizontal") * speed * Time.deltaTime;
 			float v = Input.GetAxis ("Vertical") * speed * Time.deltaTime;
@@ -47,6 +60,32 @@ public class Movement : MonoBehaviour {
 			rb.velocity = Vector3.zero;
 			Debug.Log(rb.velocity);
 		}
+
+	}
+
+	void OnTriggerEnter2D(Collider2D other){
+
+
+
+		if (other.gameObject.tag == "PlayerBound") {
+			rb.velocity = Vector3.zero;
+		}
+		else {
+			Destroy(other.gameObject);
+		}
+		
+	}
+
+	void OnCollisionEnter2D(Collision2D other){
+		if (other.gameObject.tag == "IceCreamBox") {
+			gameObject.GetComponent<ShootContoller>().addMunition();
+			return;
+		}
+		if (other.gameObject.tag == "Enemy") {
+			Destroy (gameObject);
+			GameObject.Find("Manager").GetComponent<ChangeScene>().ChangeToScene(2);
+		}
+	
 	}
 
 	void OnTriggerEnter(Collider other){
